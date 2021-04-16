@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 db = SQLAlchemy(app)
 # get the API KEY here: https://developers.google.com/custom-search/v1/overview
-API_KEY = "AIzaSyArZGixoRLcGXuFK9Y7x2EZoqVbnXtjOsY"
+API_KEY = ""
 # get your Search Engine ID on your CSE control p anel
 SEARCH_ENGINE_ID = "cfdb19d7a376066b1"
 # target domain you want to track
