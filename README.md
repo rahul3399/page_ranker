@@ -55,11 +55,9 @@ Datatables.net
 # DEPLOYMENT SEREVR: 
 Heroku.
 # Output: 
-
-Output 1:
 ![image](https://user-images.githubusercontent.com/30198486/114990059-c49fac80-9eb5-11eb-9beb-0b81fad9d123.png)
 
-Output 2:
+
 ![image](https://user-images.githubusercontent.com/30198486/114990153-daad6d00-9eb5-11eb-8ff3-9952ec234a96.png)
 
 
