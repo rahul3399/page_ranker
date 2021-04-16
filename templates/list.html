@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.1.0/css/adminlte.min.css" integrity="sha512-mxrUXSjrxl8vm5GwafxcqTrEwO1/oBNU25l20GODsysHReZo4uhVISzAKzaABH6/tTfAxZrY2FprmeAP5UZY8A==" crossorigin="anonymous" />
+    <link rel='stylesheet' href='https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css'>
+    <link rel='stylesheet' href='https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css'>
+     <title>Page Rank</title>
+
+  </head>
+  <body>
+    <header class="bg-light">
+        <div class="container">
+          <nav class="navbar navbar-expand-sm navbar-light pt-3 pb-3">
+            <a class="navbar-brand" href="#"><b>WEB PAGE RANKER</b></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+        </div>
+      </header>
+      <br>
+      <section>
+        
+        <br>
+        <div class="card card-success" style="margin: 30px;">
+          <div class="card-header">
+            <div class="card-title"> 
+                PAGE RANK AS PER QUERY 
+            </div>
+          
+          </div>
+          <div class="card-body">
+            <table id="example" class="display" cellspacing="0" width="100%">
+              <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Rank</th>
+                    <th>Query</th>
+                    <th>Title</th>
+                    <th>Snippet</th>
+                    <th>Link</th>
+                    <th>Action</th>
+                  </tr>
+              </thead>
+              <tfoot>
+                  <tr>
+                    <th>#</th>
+                    <th>Rank</th>
+                    <th>Query</th>
+                    <th>Title</th>
+                    <th>Snippet</th>
+                    <th>Link</th>
+                    <th>Action</th>
+                  </tr>
+              </tfoot>
+              <tbody>
+                
+                  {% for book in books %}
+                  <tr>
+                      <td>{{book.r_id}}</td>
+                      <td>{{book.c_rank}}</td>
+                      <td>{{book.c_query}}</td>
+                      <td>{{book.c_title}}</td>
+                      <td width="100px">{{book.c_snippet}}</td>
+                      <td><a href="{{book.c_link}}">{{book.c_link}}</a></td>
+                      <td><a href="/delete/{{book.r_id}}" class="btn btn-danger">delete</a></td>
+                  </tr>
+                  {% endfor %}
+                 
+              </tbody>
+          </table>
+          </div>
+       <!-- /.card -->
+      </div>
+      </div>
+    
+    
+      </section>
+    
+      <script src='https://code.jquery.com/jquery-1.12.3.js'></script>
+      <script src='https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'></script>
+      <script src='https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js'></script>
+      <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js'></script>
+      <script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js'></script>
+      <script src='https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js'></script>
+      <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js'></script>
+      <script src='https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js'></script>
+      <script  src="{{url_for('static', filename='js/script.js')}}"></script>    
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
